@@ -4,7 +4,36 @@ Lemon Restaurant is a web application built with Flask that allows users to view
 
 ## Project Structure
 
-Lemon_Restaurant/ │ ├── static/ │ ├── css/ │ │ └── style.css # Main stylesheet for the website │ └── images/ # All images used on the website │ ├── Nonna_image.jpeg │ ├── Spagetti_al_limone.jpeg │ ├── about_us.jpeg │ ├── barolo.jpeg │ ├── chianti.jpeg │ ├── head_chef.jpeg │ ├── limoncello.jpeg │ ├── location_new.jpeg │ ├── manager.jpeg │ ├── menu.jpeg │ ├── nero_davola.jpeg │ ├── pastry_chef.jpeg │ ├── penne_all_arrabiata.jpeg │ ├── prosecco.jpeg │ ├── reservation.jpeg │ ├── reservation_home.jpeg │ ├── restaurant_main.jpeg │ ├── templates/ # HTML templates used by the Flask application │ ├── about.html │ ├── base.html # Base template used by other templates │ ├── home.html │ ├── location.html │ ├── login.html │ ├── menu.html │ ├── reservations.html │ └── signup.html │ ├── app.py # Main Python file with Flask routes and logic └── README.md # This file
+Lemon_Restaurant/
+├── static/ ──> css/ ──> style.css (Main stylesheet for the website) 
+├── static/ ──> images/ ──> Nonna_image.jpeg,
+                            Spagetti_al_limone.jpeg, 
+                            about_us.jpeg, 
+                            barolo.jpeg, 
+                            chianti.jpeg, 
+                            head_chef.jpeg, 
+                            limoncello.jpeg, 
+                            location_new.jpeg, 
+                            manager.jpeg, 
+                            menu.jpeg, 
+                            nero_davola.jpeg, 
+                            pastry_chef.jpeg, 
+                            penne_all_arrabiata.jpeg, 
+                            prosecco.jpeg, 
+                            reservation.jpeg, 
+                            reservation_home.jpeg, 
+                            restaurant_main.jpeg 
+├── templates/ ──> about.html, 
+                   base.html (Base template used by other templates), 
+                   home.html, 
+                   location.html, 
+                   login.html, 
+                   menu.html, 
+                   reservations.html, 
+                   signup.html 
+├── app.py (Main Python file with Flask routes and logic) 
+└── README.md (This file)
+
 
 ## Features
 
