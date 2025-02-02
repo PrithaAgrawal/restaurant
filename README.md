@@ -67,6 +67,9 @@ To run the project locally, follow these steps:
 
 5. Open your browser and visit http://127.0.0.1:5000/ to see the application in action.
 
+## Requirements.txt
+Use the `requirements.txt` file to download the required dependencies.
+
 ## Technology Stack
 1. Frontend: HTML, CSS (Bootstrap for responsiveness)
 
