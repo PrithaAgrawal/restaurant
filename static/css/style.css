@@ -1,0 +1,779 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f8f9fa;
+}
+
+/* Image with Text */
+.image-container {
+    position: relative;
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* Restaurant Main Image */
+.restaurant-image {
+    height: 100px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-style: italic;
+}
+
+.image-text h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    font-weight: 700; /* Bold weight */
+    margin-bottom: 10px;
+    white-space: nowrap;
+    font-style: normal;
+}
+
+.image-text p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* About Us */
+
+#About_us {
+    background-color: #f7f3e7; /* Light yellowish color */
+  }
+  
+.section-line hr {
+    border: 1;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0; /* Adjust spacing as needed */
+}
+
+.about-us-heading {
+    font-family: "Cormorant Garamond", "Cinzel Decorative", serif;
+    text-align: center; /* Center the text */
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0 auto; /* Center within the parent container */
+    padding-bottom: 10px;
+    color: #333;
+    display: block; /* Ensure it's treated as a block element */
+    width: fit-content; /* Ensure the width fits the content */
+}
+
+.about-us-paragraph p{
+    font-family: 'Dancing Script', cursive; 
+}
+.about-us-paragraph {
+    font-size: 1.5rem; /* Adjust font size */
+    line-height: 1.8; /* Add spacing between lines for better readability */
+    text-align: center; /* Center-align text */
+    color: #4B4B4B; /* Elegant dark gray color */
+    max-width: 900px; /* Optional: Limit paragraph width for neat formatting */
+    margin: 0 auto; /* Center the paragraph block */
+    padding: 20px 15px; /* Add some padding */
+}
+
+.custom-button4 {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .custom-button4:hover {
+    background-color: white; /* Changes background to white on hover */
+    color: #4CAF50;          /* Changes text color to green on hover */
+    border: 1px solid #54b657;
+  }
+  
+/* Favorites Section */
+.favorites-section {
+    margin-top: 3rem;
+}
+
+.favorites-title {
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* General Section Styling */
+#favorites {
+    margin-top: 60px;
+    background-color: #FDFCFB; /* Subtle off-white background */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+  }
+  
+  #favorites h1 {
+    font-family: "Cormorant Garamond", "Cinzel Decorative", serif;
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: 400; /* You can adjust the font-weight for a bolder look */
+    color: #4B4B4B; /* You can also adjust the color if needed */
+  }
+  
+  /* Favorite Dishes Container */
+  .favorites-container, .favorites-container2, .favorites-container3 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px; /* Space between each favorite dish section */
+    width: 100%;
+    max-width: 1200px; /* Slightly increased max-width for better spacing */
+    padding: 0 30px; /* Added more padding */
+    gap: 20px; /* Ensure space between text and images */
+}
+
+/* Favorite Images */
+.favorites-image, .favorites-image2, .favorites-image3 {
+    height: 500px; /* Increased height to make images longer */
+    width: 45%; /* Keep width the same as before */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    border-radius: 10px; /* Rounded corners for smooth edges */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.favorites-image:hover,
+.favorites-image2:hover,
+.favorites-image3:hover {
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Text Box Styling */
+.favorites-text-box, .favorites-text-box2, .favorites-text-box3 {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px 25px;
+    width: 45%; /* Match image width */
+    border-radius: 10px; /* Smooth corners for elegance */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+    font-family: 'Cormorant Garamond', serif;
+    color: #4B4B4B;
+    transition: transform 0.3s ease;
+}
+
+  
+  .favorites-text-box:hover, .favorites-text-box2:hover, .favorites-text-box3:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  }
+  
+  /* Title in Text Box */
+  .favorites-text-box h2, .favorites-text-box2 h2, .favorites-text-box3 h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #2C3E50;
+  }
+  
+  /* Ratings & Call to Action */
+  .favorites-text-box p, .favorites-text-box2 p, .favorites-text-box3 p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  
+  .custom-button1, .custom-button2, .custom-button3 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .custom-button1:hover, .custom-button2:hover, .custom-button3:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.1);
+  }
+  
+/* Reservation home page */
+#reservation-home {
+    position: relative; /* Ensures text is positioned relative to the section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px; /* Increased padding to create a wider border around the image */
+  }
+  #reservation-home h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem; /* Adjust the size as needed */
+  }  
+  #reservation-home p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem; /* Adjust the size as needed */
+  } 
+  .reservation-home-image {
+    width: 100%;
+    height: 350px; /* Decreased height of the image */
+    object-fit: cover;
+    filter: brightness(50%); /* Optional: Darken the image for better text visibility */
+    border-radius: 10px; /* Adds a rounded border to the image */
+  }
+  
+  .reservation-overlay {
+    position: absolute; /* Position text over the image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center; /* Align text in the center */
+    z-index: 1; /* Ensure text appears above the image */
+  }
+  
+  .reservation-overlay h1,
+  .reservation-overlay p {
+    color: white; /* White text for contrast */
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+  
+  .reservation-overlay a {
+    margin-top: 1em;
+  }
+  
+  /* Footer */
+  
+  .footer {
+    background-color: #f7f3e7; /* Subtle off-white with a warm undertone */
+    color: #333; /* Dark text color for contrast */
+    padding: 40px 0;
+  }
+  
+  .footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer p, .footer ul {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+  
+  .footer a {
+    color: #333; /* Darker text for links */
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icon {
+    font-size: 1rem;
+    margin-right: 15px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer .col-md-4 {
+    width: 30%;
+  }
+  
+  .footer .mt-4 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* ABOUT PAGE */
+
+  .about-section {
+    position: relative;
+    height: 50vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.about-section img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.about-text {
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for better readability */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.about-text h1 {
+  font-size: 5rem; /* Increase the font size (adjust as needed) */
+  font-weight: bold; /* Ensure the text is bold */
+  margin: 0; /* Remove default margin for consistent alignment */
+  line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+.about-paragraph p {
+    font-family: 'Dancing Script', cursive; 
+}
+
+.about-paragraph {
+  font-size: 1.5rem; /* Adjust font size */
+  line-height: 1.8; /* Add spacing between lines for better readability */
+  text-align: center; /* Center-align text */
+  color: #4B4B4B; /* Elegant dark gray color */
+  max-width: 900px; /* Limit paragraph width for neat formatting */
+  margin: 50px auto; /* Add more space above and below the paragraph */
+  padding: 30px 20px; /* Add more padding inside the bordered area */
+  border-top: 2px solid #D3D3D3; /* Add a top border with light gray color */
+  border-bottom: 2px solid #D3D3D3; /* Add a bottom border with light gray color */
+}
+
+/*Reason Section*/
+
+.reason-section {
+  display: flex; /* Use flexbox for side-by-side alignment */
+  align-items: stretch; /* Ensure the text and image have equal height */
+  gap: 40px; /* Add more space between the image and text */
+  padding: 20px; /* Add padding around the section */
+}
+
+.reason-image {
+  height: 700px; /* Set a fixed height for the image */
+  width: 40%; /* Image takes up 40% of the width */
+  object-fit: cover; /* Ensure the image fills the container without distortion */
+}
+
+.reason-text {
+  width: 55%; /* Text takes up the remaining width */
+  background-color: #FFF4E0; /* Soft pastel peach color */
+  padding: 40px; /* Add more padding inside the text box */
+  border-radius: 0; /* Sharp corners for a clean look */
+  color: #4B4B4B; /* Elegant dark gray text color */
+  font-size: 1.5rem; /* Larger text size */
+  line-height: 2; /* Increase spacing between lines */
+  font-family: 'Dancing Script', cursive; /* Optional: Use a fancy font if needed */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visual appeal */
+  display: flex; /* Make the text container flexible */
+  align-items: center; /* Center the text vertically within the container */
+  height: 700px; /* Match the height of the image */
+}
+
+/* Team Section */
+
+.team-section {
+  background-color: #f8f8f8; /* Light background color */
+  padding: 50px 0; /* Vertical padding for the section */
+}
+
+.team-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #4B4B4B; /* Elegant gray color */
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px; /* Space between team members */
+  justify-items: center;
+}
+
+.team-member {
+  background-color: #FFF; /* White background for each team member */
+  padding: 20px; /* Slightly increased padding for more space inside */
+  width: 280px; /* Slightly larger width for the team member box */
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  border-radius: 10px; /* Optional: keep rounded corners */
+  margin: 20px; /* Reduced space between team members */
+}
+
+.team-member:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.team-photo {
+  width: 100%;
+  height: 280px; /* Increased height for a bigger image */
+  object-fit: cover; /* Ensure images fill the container without distortion */
+  margin-bottom: 15px; /* Reduced margin between image and text */
+  border-radius: 0%; /* Square images */
+}
+
+.team-name {
+  font-size: 1.6rem; /* Slightly larger name font */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.team-position {
+  font-size: 1.2rem; /* Slightly larger position text */
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.team-description {
+  font-size: 1rem; /* Slightly larger description text */
+  color: #4B4B4B;
+  line-height: 1.5;
+  padding: 0 10px; /* Reduce padding */
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Reduced gap between boxes */
+  justify-items: center;
+}
+
+.reservation-section {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust based on your preference */
+}
+
+.reservation-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reservation-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.reservation-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Reservation Form */
+/* Reservation Form */
+.reservation-form {
+  background-color: white;
+  padding: 40px;
+  margin: 40px auto 50px auto; /* Added top margin (40px) for space between the image and the form */
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+.reservation-form .form-group {
+  margin-bottom: 20px;
+}
+
+.reservation-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="date"],
+.reservation-form input[type="time"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.reservation-form button {
+  background-color: #28a745; /* Lemon color */
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+  background-color: #28a745; /* Darker shade of lemon */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .reservation-form {
+      width: 90%;
+      padding: 30px;
+  }
+
+  .reservation-text h1 {
+      font-size: 2rem;
+  }
+}
+
+/* Location Section */
+.location-section {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.location-section img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.8); /* Optional: Adjusts image brightness */
+}
+
+.location-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.location-info {
+  width: 40%;
+  text-align: center; /* Keeps text centered inside */
+}
+
+.why-here {
+  width: 50%;
+  margin-left: 5%;
+  text-align: center; /* Keeps text centered inside */
+  font-family: 'Dancing Script', cursive; /* Apply the new font */
+  font-size: 24px; /* Adjusted for equal size */
+  color: #333; /* Darker text for contrast */
+  line-height: 1.6; /* Improved line spacing */
+  padding: 20px; /* Added padding for spacing */
+}
+
+.location-info {
+  width: 50%;
+  margin-left: 5%;
+  text-align: center; /* Keeps text centered inside */
+  font-family: 'Dancing Script', cursive; /* Apply the new font */
+  font-size: 24px; /* Adjusted for equal size */
+  color: #333; /* Darker text for contrast */
+  line-height: 1.6; /* Improved line spacing */
+  padding: 20px; /* Added padding for spacing */
+}
+
+.location-info h2 {
+  border-bottom: 2px solid #333; /* Add a bottom border to the main heading */
+  padding-bottom: 10px; /* Space between text and border */
+}
+
+.location-info h3 {
+  color: #333; /* Bold red color for better emphasis */
+  font-size: 28px; /* Increased font size */
+  font-weight: 700; /* Make the text bold */
+  text-transform: uppercase; /* Uppercase letters for more emphasis */
+  letter-spacing: 1px; /* Slight spacing between letters */
+  margin-bottom: 15px; /* Increase space below headings */
+}
+
+.location-info h3 {
+  font-size: 24px; /* Slightly smaller font size for subheadings */
+  margin-bottom: 20px; /* Increase margin to separate from content */
+}
+
+.location-info p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.location-info a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.map-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+.about-text {
+  background: rgba(0, 0, 0, 0); /* Transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Menu Section */
+
+.menu-section {
+  text-align: center;
+  position: relative;
+}
+
+.menu-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.menu-category {
+  margin-bottom: 40px;
+}
+
+/* Menu Image Styling */
+.menu-img {
+  width: 100%;  /* Keeps the image full width */
+  height: 70%;  /* Reduces the height from the bottom */
+  object-fit: cover;  /* Ensures the image covers the area without distortion */
+  object-position: top;  /* Keeps the top of the image visible */
+  display: block;
+  margin: 0 auto;  /* Centers the image horizontally */
+}
+
+/* Section Titles */
+.menu-category h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+  color: #333;
+}
+
+/* Horizontal Line */
+.menu-category hr {
+  width: 80%;
+  margin: 10px auto;
+  border: 0;
+  height: 2px;
+  background-color: #ddd;
+}
+
+/* Menu Items */
+.menu-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-category li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Emphasizing Dish Names */
+.menu-category li strong {
+  color: #222;
+  font-weight: bold;
+}
+
+/* Wine Section Styling */
+.wine-section {
+  background-color: #e6d2c0; /* Warm beige or light coffee shade */
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Remove borders */
+.wine-section::before,
+.wine-section::after {
+  display: none;
+}
+
+/* Wine Heading */
+.wine-heading {
+  font-size: 32px;
+  font-family: 'Dancing Script', cursive;
+  color: black;
+  margin-bottom: 10px;
+  border-bottom: none !important; /* Ensure no border */
+  text-decoration: none !important; /* Removes any underline */
+}
+
+/* General Text Styling Inside Wine Section */
+.wine-section * {
+  color: black !important; /* Ensures all text inside is black */
+}
+
+/* Wine Items */
+.wine-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wine-item {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 220px;
+}
+
+.wine-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.wine-item h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: black; /* Ensures heading is black */
+}
+
+.wine-item p {
+  font-size: 16px;
+  color: black; /* Ensures paragraph text is black */
+  line-height: 1.4;
+}
+

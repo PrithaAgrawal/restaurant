@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Lemon{% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="alert alert-{{ messages[0][0] }}">
+            {{ messages[0][1] }}
+        </div>
+    {% endif %}
+{% endwith %}
+
+<div class="image-container">
+  <img src="{{ url_for('static', filename='images/restraunt_main.jpeg') }}" 
+       alt="restaurant main view" 
+       class="img-fluid restaurant-image">
+  <div class="image-text">
+    <h1>Welcome to Lemons</h1>
+    <p>Experience the best flavors from around the world!</p>
+  </div>
+</div>
+
+<section id="About_us" class="mt-5">
+  <div class="section-line">
+    <hr>
+  </div>
+  <h1 class="about-us-heading">About Us</h1>
+  <div class="about-us-paragraph">
+    <p>
+      Welcome to Lemons, where the vibrant flavors of Italy come to life! nestled in the heart of Delhi, </br>
+      Our restaurant is a celebration of authentic Italian cuisine, crafted with passion and the</br>freshest ingredients.</br>
+      From perfectly brewed espressos to handmade desserts, we invite you to explore </br>Italy’s culinary traditions, </br>
+      with dishes inspired by Tuscany, Naples, and the Amalfi Coast.</br> Whether it’s our zesty Spaghetti al Limone or in-house Limoncello,</br>
+      every dish promises love, precision, and excellence. </br>Join us at Lemons, A slice of Italy in India!</br>
+      Buon appetito!
+    </p>
+    <a href="{{ url_for('about') }}" class="custom-button4">Learn More</a>
+  </div>
+  <div class="section-line">
+    <hr>
+  </div>
+</section>
+
+<section id="favorites" class="mt-5">
+  <h1 class="text-center fst-italic">Our Favorites</h1>
+
+  <!-- Favorite Dishes -->
+  <div class="favorites-container">
+    <img 
+      src="{{ url_for('static', filename='images/Spagetti_al_limone.jpeg') }}" 
+      alt="Spaghetti al Limone" 
+      class="favorites-image">
+    <div class="favorites-text-box">
+      <h2 class="border-bottom fw-lighter">Spaghetti al Limone</h2>
+      <p>
+        Delight your senses with our signature Spaghetti al Limone, a perfect harmony of zesty lemons, creamy Parmigiano, and a touch of Italian finesse. Served with al dente pasta and a rich lemon sauce, this dish embodies the true essence of Italian comfort food. One bite, and you'll know why it’s a crowd favorite at Lemons!
+      </p>
+      <p>
+        Whether you're a long-time fan of Italian cuisine or trying something new, this classic recipe never fails to satisfy. Light yet flavorful, it's the ideal dish to enjoy at any time of the day. Paired with a glass of crisp white wine, it's a culinary experience like no other.
+      </p>
+      <p>⭐⭐⭐⭐⭐ (4.9/5)</p>
+      <a href="{{ url_for('reservations') }}" class="custom-button1">Try it!</a>
+    </div>
+  </div>
+
+  <div class="favorites-container2">
+    <div class="favorites-text-box2">
+      <h2 class="border-bottom fw-lighter">Penne all'Arrabbiata</h2>
+      <p>
+        Our Penne all'Arrabbiata is a fiery Italian classic that combines perfectly cooked penne with bold, sweet cherry tomatoes and a kick of red chili peppers. Topped with Pecorino Romano cheese, this dish is the epitome of flavorful simplicity. The combination of spicy and savory will surely leave you craving more.
+      </p>
+      <p>
+        Whether you’re in the mood for something spicy or simply want to try an authentic Italian favorite, Penne all'Arrabbiata delivers. The rich tomato sauce with a hint of heat is the perfect complement to the perfectly cooked pasta.
+      </p>
+      <p>⭐⭐⭐⭐(4/5)</p>
+      <a href="{{ url_for('reservations') }}" class="custom-button2">Try it!</a>
+    </div>
+    <img
+      src="{{ url_for('static', filename='images/penne_all_arrabiata.jpeg') }}"
+      alt="Penne all'Arrabbiata"
+      class="favorites-image2">
+  </div>
+
+  <div class="favorites-container3">
+    <img
+        src="{{ url_for('static', filename='images/limoncello.jpeg') }}"
+        alt="limoncello"
+        class="favorites-image3">
+    <div class="favorites-text-box3">
+        <h2 class="border-bottom fw-lighter">Limoncello</h2>
+        <p>
+            Our In-House Limoncello, made from hand-zested lemons, is a perfect blend of sweet, tangy, and refreshing. This Italian spirit, typically served as a chilled after-dinner drink, offers a smooth finish to any meal. Crafted from the finest local lemons, it's a tribute to the Italian art of making liqueurs.
+        </p>
+        <p>
+            Served chilled, Limoncello has a sharp citrus flavor balanced by the perfect amount of sweetness. It's the ideal way to cleanse your palate after a flavorful meal, or simply enjoy it as a refreshing drink on a warm evening. Don’t miss out on this authentic Italian experience!
+        </p>
+        <p>⭐⭐⭐⭐⭐(4.9/5)</p>
+        <a href="{{ url_for('reservations') }}" class="custom-button3">Try it!</a>
+    </div>
+  </div>
+
+</section>
+
+<section id="reservation-home" class="mt-5 text-center position-relative">
+  <div class="reservation-overlay" style="background-color: rgba(0, 0, 0, 0); color: white; padding: 40px;">
+    <h1 class="fw-bold mb-4 text-white" style="font-family: 'Dancing Script', cursive; font-size: 3.5rem; margin-bottom: 10px;">Join Us for Dinner ?</h1>
+    <p class="mt-3 text-white" style="margin-top: 5px;">
+      Secure your spot at Lemons and experience authentic Italian flavors like never before!
+    </p>
+    <a href="{{ url_for('reservations') }}" type="button" class="btn" style="background-color: black; color: white; border: none;">Make a Reservation</a>
+  </div>
+  <img 
+    src="{{ url_for('static', filename='images/reservation_home.jpeg') }}"
+    alt="Reservation desk at Lemons restaurant" 
+    class="img-fluid reservation-home-image">
+</section>
+
+
+{% endblock %}

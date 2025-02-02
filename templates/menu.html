@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Our Menu - Lemon{% endblock %}
+
+{% block content %}
+
+<div class="menu-section position-relative">
+    <img src="{{ url_for('static', filename='images/menu.jpeg') }}" alt="Menu Background" class="menu-img">
+    <div class="about-text position-absolute top-50 start-50 translate-middle text-center text-white p-4">
+        <h1 class="fw-bold">Our Menu</h1>
+    </div>
+</div>
+
+
+<!-- Menu Container -->
+<div class="menu-container">
+    <!-- Florence Section -->
+    <div class="menu-category">
+        <h2>Florence</h2>
+        <hr>
+        <ul>
+            <li><strong>Bistecca alla Fiorentina</strong> – Grilled T-bone steak served rare</li>
+            <li><strong>Pappa al Pomodoro</strong> – Tomato and bread soup with olive oil</li>
+            <li><strong>Ribollita</strong> – Hearty vegetable soup with beans</li>
+        </ul>
+    </div>
+
+    <!-- Naples Section -->
+    <div class="menu-category">
+        <h2>Naples</h2>
+        <hr>
+        <ul>
+            <li><strong>Pizza Margherita</strong> – Classic pizza with tomatoes, mozzarella, and basil</li>
+            <li><strong>Spaghetti alle Vongole</strong> – Pasta with clams, garlic, and white wine</li>
+            <li><strong>Babà</strong> – Rum-soaked sponge cake</li>
+        </ul>
+    </div>
+
+    <!-- Bologna Section -->
+    <div class="menu-category">
+        <h2>Bologna</h2>
+        <hr>
+        <ul>
+            <li><strong>Tagliatelle al Ragù</strong> – Handmade pasta with slow-cooked meat sauce</li>
+            <li><strong>Tortellini in Brodo</strong> – Stuffed pasta in rich broth</li>
+            <li><strong>Mortadella</strong> – Traditional Italian cured meat</li>
+        </ul>
+    </div>
+
+    <!-- Sicily Section -->
+    <div class="menu-category">
+        <h2>Sicily</h2>
+        <hr>
+        <ul>
+            <li><strong>Arancini</strong> – Fried rice balls with ragù and cheese</li>
+            <li><strong>Caponata</strong> – Sweet and sour eggplant stew</li>
+            <li><strong>Cannoli</strong> – Crispy pastry filled with sweet ricotta</li>
+        </ul>
+    </div>
+
+    <!-- Amalfi Coast Section -->
+    <div class="menu-category">
+        <h2>Amalfi Coast</h2>
+        <hr>
+        <ul>
+            <li><strong>Scialatielli ai Frutti di Mare</strong> – Fresh pasta with seafood</li>
+            <li><strong>Delizia al Limone</strong> – Lemon-flavored sponge cake</li>
+            <li><strong>Totani e Patate</strong> – Squid with potatoes in a flavorful broth</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Wine Section -->
+<div class="wine-section">
+    <h2 class="wine-heading">Our Wine Selection</h2>
+    <hr>
+
+    <div class="wine-container">
+        <!-- Wine 1 -->
+        <div class="wine-item">
+            <img src="{{ url_for('static', filename='images/chianti.jpeg') }}" alt="Chianti Classico">
+            <h3>Chianti Classico</h3>
+            <p>A famous Tuscan red wine with notes of cherry and spice.</p>
+        </div>
+
+        <!-- Wine 2 -->
+        <div class="wine-item">
+            <img src="{{ url_for('static', filename='images/barolo.jpeg') }}" alt="Barolo">
+            <h3>Barolo</h3>
+            <p>Bold, full-bodied red wine from Piedmont, known as "the king of wines."</p>
+        </div>
+
+        <!-- Wine 3 -->
+        <div class="wine-item">
+            <img src="{{ url_for('static', filename='images/prosecco.jpeg') }}" alt="Prosecco">
+            <h3>Prosecco</h3>
+            <p>A light and refreshing sparkling wine from Veneto, Italy.</p>
+        </div>
+
+        <!-- Wine 4 -->
+        <div class="wine-item">
+            <img src="{{ url_for('static', filename='images/nero_davola.jpeg') }}" alt="Nero d'Avola">
+            <h3>Nero d'Avola</h3>
+            <p>A rich Sicilian red wine with notes of dark fruit and spice.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
