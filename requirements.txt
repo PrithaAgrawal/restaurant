@@ -1,0 +1,6 @@
+python==3.9.7  # or whatever version you're using
+Flask==2.2.3
+Flask-SQLAlchemy==2.5.1
+Werkzeug==2.2.3
+psycopg2==2.9.6  # For PostgreSQL integration
+Flask-WTF==1.0.1  # For CSRF protection (if you're using Flask forms)
