@@ -44,11 +44,11 @@ def about():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = request.form['username']  # Fix: Use 'username' instead of 'email'
+        username = request.form['username']
         password = request.form['password']
-        user = User.query.filter_by(username=username).first()  # Query by username
+        user = User.query.filter_by(username=username).first()
 
-        if user and user.password == password:
+        if user and check_password_hash(user.password, password):  # Validate hashed password
             session['user_id'] = user.id
             flash('Login successful', 'success')
             return redirect(url_for('home'))
@@ -56,7 +56,6 @@ def login():
             flash('Invalid credentials, please try again.', 'danger')
 
     return render_template('login.html')
-
 
 @app.route('/logout')
 def logout():
@@ -69,29 +68,23 @@ def signup():
     if request.method == 'POST':
         username = request.form['username']
         email = request.form['email']
-        password = request.form['password']  
-
-        # Debugging: Check if data is received
-        print(f"Received Data - Username: {username}, Email: {email}, Password: {password}")
+        password = request.form['password']
 
         existing_user = User.query.filter_by(email=email).first()
         if existing_user:
             flash('Email already exists. Please log in.', 'danger')
             return redirect(url_for('login'))
 
-        new_user = User(username=username, email=email, password=password)
+        hashed_password = generate_password_hash(password)  # Hashing password
+        new_user = User(username=username, email=email, password=hashed_password)
         db.session.add(new_user)
-        db.session.commit()  # Ensure commit is correct
-
-        # Debugging: Check if the user is saved
-        print(f"User {username} added successfully!")
+        db.session.commit()
 
         session['user_id'] = new_user.id
         flash('Signup successful!', 'success')
         return redirect(url_for('home'))
 
     return render_template('signup.html')
-
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -110,30 +103,27 @@ def reservations():
 @app.route('/submit_reservation', methods=['POST'])
 def submit_reservation():
     name = request.form['name']
-    reservation_date = request.form['date']
-    reservation_time = request.form['time']
-    
-    # Assuming you are logged in and have access to session['user_id']
-    user_id = session.get('user_id')  # Get user_id from session
+    reservation_date = datetime.strptime(request.form['date'], "%Y-%m-%d").date()  # Convert to date
+    reservation_time = datetime.strptime(request.form['time'], "%H:%M").time()  # Convert to time
+
+    user_id = session.get('user_id')
 
     if user_id:
-        # Create a new reservation
         new_reservation = Reservation(
             name=name,
             reservation_date=reservation_date,
             reservation_time=reservation_time,
-            user_id=user_id  # Associate the reservation with the user
+            user_id=user_id
         )
         
         db.session.add(new_reservation)
-        db.session.commit()  # Commit the changes to the database
+        db.session.commit()
 
         flash('Reservation submitted successfully!', 'success')
     else:
         flash('You must be logged in to make a reservation.', 'danger')
 
     return redirect(url_for('home'))
-
 
 @app.route('/location')
 def location():
